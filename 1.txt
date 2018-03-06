@@ -5,6 +5,10 @@
         </div>
     </form>
 
+//links
+[2:15 PM, 3/6/2018] Sushma: https://www.aspsnippets.com/Articles/ASPNet-MVC-jQuery-AJAX-and-JSON-Example.aspx
+[2:15 PM, 3/6/2018] Sushma: https://levelnis.co.uk/blog/how-do-you-post-to-a-web-api-controller-from-an-mvc-controller
+//links
 
         // GET: api/EndPoint
         public HttpResponseMessage GetImg()
