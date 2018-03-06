@@ -1,0 +1,47 @@
+    <form id="form1" method="get" action="api/endpoint" runat="server">
+        <div>
+            <h2>Get Img</h2>
+            <asp:Button ID="btnsubmit" runat ="server" Text="Get Img"/>
+        </div>
+    </form>
+
+
+        // GET: api/EndPoint
+        public HttpResponseMessage GetImg()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://xtz/");
+            //Format JSON
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            var type = "key";
+            HttpResponseMessage response = client.GetAsync("xxxx" + type).Result;
+            return response;
+        }
+
+        // GET: api/EndPoint/1
+        public HttpResponseMessage Get(int id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://xyz/");
+            client.DefaultRequestHeaders.Accept.Add(  
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            var type = "key";
+            HttpResponseMessage response = client.GetAsync("xxxxxx" + type).Result;
+            return response;
+        }
+
+        // POST: api/EndPoint
+       
+        public string Post(string request)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("xyz");
+            var type = "tex";
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            var response = client.PostAsJsonAsync("xxxx" + type, request).Result;
+            return response.ToString();
+                }
+
+
